@@ -53,7 +53,7 @@ package com.test.classes;
 			addToCartButton.click();
 			Thread.sleep(8000);
 			
-			// Step 6: Verify the cart has been updated
+			// Step 6: Verify the cart has been updated with the added item
 			WebElement cartCount = driver.findElement(By.xpath("//span[@class='gh-cart__icon']"));
 			String itemCount = cartCount.getText();
 			System.out.println("Item Count is  " + itemCount);
