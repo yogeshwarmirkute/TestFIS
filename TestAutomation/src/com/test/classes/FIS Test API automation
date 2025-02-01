@@ -1,0 +1,12 @@
+Code of API automation : 
+Response response = given()
+                    .when()
+                    .get(API_URL)
+                    .then()
+                    .assertThat()
+                    .statusCode(200)
+
+.body("bpi", hasKey("USD"))
+.body("bpi", hasKey("GBP"))
+.body("bpi", hasKey("EUR"))
+.body("bpi.GBP.description", equalTo("British Pound Sterling"));
